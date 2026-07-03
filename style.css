@@ -1,0 +1,598 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 5rem;
+    background-color: black;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 90%;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.menu {
+    font-size: 16px;
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    gap: 6rem;
+    color: gray;
+}
+
+.menu-link {
+    color: hsl(0, 0%, 65%);
+}
+
+.menu-link-shop {
+    position: relative;
+    z-index: 1;
+}
+
+.menu-link:hover {
+    transition: 0.3s ease;
+    color: white;
+}
+
+.menu-link-option {
+    color: gray;
+}
+
+.menu-link-option:hover {
+    color: white;
+}
+
+.menu li {
+    position: relative; 
+}
+
+.menu-link-options {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    list-style: none;
+    background-color: black;
+    padding-left: 0;
+    padding-top: 2rem; 
+    width: 13rem;
+    text-align: center;
+    z-index: 10;
+}
+
+.menu-link-options.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-link-option {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: rgb( 162,156,156);
+}
+
+.white-text {
+    color: white;
+}
+
+.social-media {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    width: 6rem;
+    height: 15rem;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.social-media-icon-facebook {
+    position: absolute;
+    right: 24px;
+    top: 18px;
+    color: white;
+    width: 3rem;
+}
+
+.social-media-icon-instagram {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    color: white;
+    width: 3rem;
+}
+
+.social-media-icon-twitter {
+    position: absolute;
+    right: 24px;
+    top: 90px;
+    color: white;
+    width: 3rem;
+}
+
+.hero__text-one {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0 0 0 8rem;
+}
+
+.hero__text-two {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 15px;
+    margin: 0;
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50rem;
+    background-image: url(image/forest.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.arrow {
+    color: white;
+    font-size: 5rem;
+    position: absolute;
+    top: 37rem;
+}
+ 
+.arrow__link {
+    cursor: pointer;
+    color: white;
+}
+
+.arrow:hover {
+    position: absolute;
+    top: 38rem;
+    transition: 0.4s;
+}
+
+.assortment {
+    display: flex;
+}
+
+.assortment__new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 50%;
+    height: 40rem;
+}
+
+.new__inline {
+    font-size: 4rem;
+    color: white;
+    margin: 0;
+}
+
+.in__shop-link {
+    color: white;
+    margin: 0;
+}
+
+.in__shop {
+    font-size: 3rem;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.in__shop-link:hover {
+    transition: 0.4s;
+    color: hsl(0, 0%, 50%);
+}
+
+.bag-gray {
+    width: 747px;
+    height: 640px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.bag__options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    width: 600px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover .info {
+    opacity: 1;
+}
+
+.info__options {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.sale__options {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding-top: 6rem;
+}
+
+.sale__optons-headline {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.sale__options-discount {
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.sale__options-discount-num {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.product-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 60px 20px;
+}
+
+.unit {
+    width: 320px;
+    cursor: pointer;
+}
+
+.unit-box {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.unit-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.unit-desc {
+    text-align: center;
+    padding: 20px 10px;
+    transition: all 0.4s ease;
+}
+
+.unit:hover .unit-desc {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.unit-name {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.unit-cost {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.strikethrough {
+    font-weight: bold;
+    text-decoration: line-through;
+    margin-right: 12px;
+    font-weight: normal;
+}
+
+.about__us {
+    background-image: url(image/background-image-about-us.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.about__us-info {
+    background-color: hsl(0, 0%, 0%, 0.5);
+    color: white;
+    max-width: 520px;
+    padding-left: 250px;
+    padding-top: 150px;
+    line-height: 30px;
+    height: 630px;
+}
+
+.about__us-headline {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.about__us-text {
+    font-size: 20px;
+    margin: 0;
+}
+
+.contacts {
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    padding: 6rem 0 7rem;
+    background-color: black;
+}
+
+.contacts__input {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.entry-field-two {
+    width: 360px;
+    height: 30px;
+    font-size: 1rem;
+    padding-left: 1.4rem;
+    border: 3px solid white;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contacts__input-email {
+    width: 360px;
+    height: 30px;
+    font-size: 1rem;
+    padding-left: 1.4rem;
+    border: 3px solid hsl(0, 0%, 15%);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contacts__input {
+    width: 360px;
+    height: 30px;
+    font-size: 1rem;
+    padding-left: 1.4rem;
+    border: 3px solid hsl(0, 0%, 15%);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: green;
+}
+
+.contacts__input:hover {
+    border-color: green;
+}
+
+.contacts__headline {
+    position: relative;
+    bottom: 1.2rem;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.contacts__text {
+    margin: 0;
+    font-size: 18px;
+    max-width: 360px;
+}
+
+.contacts__email {
+    margin-bottom: 0;
+    font-size: 22px;
+}
+
+.contacts__number {
+    margin: 0;
+    font-size: 22px;
+}
+
+.send {
+    color: white;
+    font-size: 1.5rem;
+    text-align: end;
+}
+
+.send:hover {
+    transition: 0.4s ease;
+    color: hsl(0, 0%, 60%);
+}
+
+.entry-field:hover {
+    border-color: hsl(145, 63%, 40%);
+}
+
+.entry-field.interacted:invalid {
+    border-color: #ff4d4d;
+}
+
+.entry-field-two.interacted-two:invalid {
+    border-color: #ff4d4d;
+}
+
+.entry-field:valid {
+    border-color: #2ecc71;
+}
+
+.entry-field-two:valid {
+    border-color: #2ecc71;
+}
+
+.subscriptions {
+    color: white;
+    text-align: center;
+    background-color: hsl(0, 0%, 8%);
+    padding: 5rem 0;
+}
+
+.subscribe-newsletter {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.subscribe-newsletter-info {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 3.5rem;
+}
+
+.add__email {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+}
+
+.submit-btn {
+    color: white;
+    font-size: 1.8rem;
+    border-color: white;
+    background-color: transparent;
+    margin-top: 10px;
+    width: 800px;
+    height: 3rem;
+}
+
+.protection-rights {
+    color: hsl(20, 40%, 88%);
+    text-align: center;
+    margin: 0;
+}
+
+.footer {
+    padding: 3rem 0;
+    background-color: hsl(0, 0%, 15%);
+}
+
+.submit-btn:hover {
+    transition: 0.2s ease;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.footer-link {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .header {
+        display: block;
+    }
+    .menu {
+        gap: 0;
+    }
+    .menu-link {
+        display: none;
+    }
+    .social-media {
+    position: block;
+    top: 0;
+    width: 6rem;
+    height: 15rem;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 1;
+    }
+    .social-media-icon-facebook {
+    position: static;
+    right: 24px;
+    top: 0;
+    color: white;
+    width: 3rem;
+    }
+    .social-media-icon-instagram {
+    position: static;
+    right: 24px;
+    bottom: 24px;
+    color: white;
+    width: 3rem;
+    }
+    .social-media-icon-twitter {
+    position: static;
+    right: 24px;
+    top: 90px;
+    color: white;
+    width: 3rem;
+}
+}
